@@ -1,0 +1,19 @@
+<!-- iterate restaurants -->
+<br>
+<h1>Restaurants</h1>
+<br>
+
+<% @restaurants.each do |restaurant| %>
+  <div class="card mt-3 p-3">
+    <em><%= restaurant.category %></em>
+    <br>
+    <h3><%= link_to restaurant.name, restaurant_path(restaurant.id) %></h3>
+    <br>
+    <%= restaurant.address %>
+  </div>
+<% end %>
+<br>
+<div>
+  <h5><%= link_to "Add a new Restaurant", new_restaurant_path %></h5>
+</div>
+

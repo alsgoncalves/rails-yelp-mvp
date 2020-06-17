@@ -7,9 +7,18 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-text pl-3">
+        <h3><%= link_to "Y E L P", restaurants_path %></h3>
+      </span>
+    </nav>
+    <div class="container w-200">
+      <%= yield %>
+    </div>
   </body>
-</html>
+</html>s
